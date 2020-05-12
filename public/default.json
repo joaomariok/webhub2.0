@@ -1,0 +1,166 @@
+{
+	"defaultlinks": [
+		{
+			"list": "Home",
+			"name": "Trello",
+			"link": "https://trello.com/b/n2EeAJLY/organização-pessoal",
+			"icon": "https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-72x72-precomposed.91a3a04ec68a60903801.png"
+		},
+		{
+			"list": "Home",
+			"name": "Gmail",
+			"link": "https://mail.google.com/mail/u/0/#inbox",
+			"icon": "https://ssl.gstatic.com/ui/v1/icons/mail/images/favicon5.ico"
+		},
+		{
+			"list": "Home",
+			"name": "Google Agenda",
+			"link": "https://calendar.google.com/calendar/r",
+			"icon": "https://calendar.google.com/googlecalendar/images/favicon_v2018_256.png"
+		},
+		{
+			"list": "Home",
+			"name": "Google Drive",
+			"link": "https://drive.google.com/drive/u/0/my-drive",
+			"icon": "https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_5.ico"
+		},
+		{
+			"list": "Home",
+			"name": "Duolingo",
+			"link": "https://www.duolingo.com/learn",
+			"icon": "https://d35aaqx5ub95lt.cloudfront.net/favicon.ico"
+		},
+		{
+			"list": "Home",
+			"name": "Spotify Web",
+			"link": "https://open.spotify.com",
+			"icon": "https://open.scdn.co/cdn/images/favicon.5cb2bd30.ico"
+		},
+		{
+			"list": "Home",
+			"name": "GitHub",
+			"link": "https://github.com",
+			"icon": "https://github.githubassets.com/favicon.ico"
+		},
+		{
+			"list": "Sociais",
+			"name": "Facebook",
+			"link": "https://www.facebook.com",
+			"icon": "https://static.xx.fbcdn.net/rsrc.php/yo/r/iRmz9lCMBD2.ico"
+		},
+		{
+			"list": "Sociais",
+			"name": "Twitter",
+			"link": "https://twitter.com/home",
+			"icon": "https://abs.twimg.com/favicons/twitter.ico"
+		},
+		{
+			"list": "Sociais",
+			"name": "Instagram",
+			"link": "https://www.instagram.com",
+			"icon": "https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png"
+		},
+		{
+			"list": "Sociais",
+			"name": "Reddit",
+			"link": "https://www.reddit.com",
+			"icon": "https://www.redditstatic.com/desktop2x/img/favicon/favicon-96x96.png"
+		},
+		{
+			"list": "Sociais",
+			"name": "LinkedIn",
+			"link": "https://www.linkedin.com/feed/",
+			"icon": "https://static-exp2.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca"
+		},
+		{
+			"list": "Assistir",
+			"name": "YouTube",
+			"link": "https://www.youtube.com",
+			"icon": "https://s.ytimg.com/yts/img/favicon_32-vflOogEID.png"
+		},
+		{
+			"list": "Assistir",
+			"name": "Twitch",
+			"link": "https://www.twitch.tv/",
+			"icon": "https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png"
+		},
+		{
+			"list": "Assistir",
+			"name": "Crunchyroll",
+			"link": "https://www.crunchyroll.com/home/queue",
+			"icon": "https://www.crunchyroll.com/favicons/favicon-32x32.png"
+		},
+		{
+			"list": "Assistir",
+			"name": "Anime-Planet",
+			"link": "https://www.anime-planet.com/users/joaomariok/anime/watching?sort=year&order=desc",
+			"icon": "https://www.anime-planet.com/favicon-32x32.png?v=WGowMEAKpM"
+		},
+		{
+			"list": "Assistir",
+			"name": "MAL Schedule",
+			"link": "https://myanimelist.net/anime/season/schedule",
+			"icon": "https://cdn.myanimelist.net/images/faviconv5.ico"
+		},
+		{
+			"list": "Assistir",
+			"name": "Netflix",
+			"link": "https://www.netflix.com/browse",
+			"icon": "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico"
+		},
+		{
+			"list": "Assistir",
+			"name": "Prime Video",
+			"link": "https://www.primevideo.com/ref=av_auth_return_redir?_encoding=UTF8&ie=UTF8&page=1&sort=TITLE_ASC",
+			"icon": "https://images-na.ssl-images-amazon.com/images/G/01/digital/video/DVUI/favicons/favicon-32x32._CB527404566_.png"
+		},
+		{
+			"list": "Assistir",
+			"name": "Udemy",
+			"link": "https://www.udemy.com/home/my-courses/learning/",
+			"icon": "https://www.udemy.com/staticx/udemy/images/v6/favicon-32x32.png"
+		},
+		{
+			"list": "Assistir",
+			"name": "UNIVESP",
+			"link": "https://login.univesp.br",
+			"icon": "https://cursos.univesp.br/accounts/1/files/143/download?verifier=HKLrVsx3JEPH7Ug37gKRhyeAZOyWEAVKJbDsti6l"
+		},
+		{
+			"list": "Piratas",
+			"name": "Yi-Fy Torrent",
+			"link": "https://yts.lt",
+			"icon": ""
+		},
+		{
+			"list": "Piratas",
+			"name": "AnimeUltima",
+			"link": "https://www17.animeultima.eu",
+			"icon": ""
+		},
+		{
+			"list": "Piratas",
+			"name": "AnimePahe",
+			"link": "https://animepahe.com",
+			"icon": ""
+		},
+		{
+			"list": "Piratas",
+			"name": "DarkAnime",
+			"link": "https://darkanime.stream/animes/",
+			"icon": ""
+		},
+		{
+			"list": "Piratas",
+			"name": "AnimeFreak",
+			"link": "https://www.animefreak.tv",
+			"icon": ""
+		},
+		{
+			"list": "Piratas",
+			"name": "Outros",
+			"link": "https://acethinker.com/download-video/websites-like-kissanime.html,
+			"icon": """
+		}
+	]
+}

@@ -1,0 +1,121 @@
+<%- include("header") -%>
+
+<!-- TITULO -->
+<section id="title">
+  <div class="container">
+    <a class="titulo" href="#">WebHub</a>
+    <small class="text-muted">by JoaoMarioK</small>
+    <!-- Default switch -->
+    <div style="float: right" class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="editSwitch">
+      <label class="custom-control-label" for="editSwitch">Edit mode</label>
+    </div>
+  </div>
+</section>
+
+<!-- CORPO -->
+<section id="lists">
+
+  <div class="container-sm">
+
+    <!-- Nav Bar -->
+
+    <div class="row">
+      <div class="col-md-3 col-4">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+          <% listItems.forEach(function(item, index){ %>
+            <% if(index === 0) { %>
+              <a class="nav-link active" id="v-pills-<%= item %>-tab" data-toggle="pill" href="#v-pills-<%= item %>" role="tab" aria-controls="v-pills-<%= item %>" aria-selected="true">
+            <% } else { %>
+              <a class="nav-link" id="v-pills-<%= item %>-tab" data-toggle="pill" href="#v-pills-<%= item %>" role="tab" aria-controls="v-pills-<%= item %>" aria-selected="true">
+            <% } %>
+              <%= item %>
+            </a>
+            <form action="/deletelist" method="post">
+              <input type="hidden" name="removeList" value=<%= item %> />
+              <button style="float: right" type="submit" class="edit-mode btn btn-outline-light btn-sm">
+                Remove
+              </button>
+            </form>
+          <% }); %>
+
+          <button type="button" class="edit-mode btn btn-outline-info btn-sm" onclick="openLinkForm()">Add link</button>
+        </div>
+      </div>
+
+      <!-- Conteúdo -->
+
+      <div class="col-md-9 col-8">
+        <div class="tab-content" id="v-pills-tabContent">
+
+          <!-- LISTS -->
+
+          <% listItems.forEach(function(listItem, index){ %>
+            <% if(index === 0) { %>
+              <div class="tab-pane fade show active" id="v-pills-<%= listItem %>" role="tabpanel" aria-labelledby="v-pills-<%= listItem %>-tab">
+            <% } else { %>
+              <div class="tab-pane fade show" id="v-pills-<%= listItem %>" role="tabpanel" aria-labelledby="v-pills-<%= listItem %>-tab">
+            <% } %>
+              <ul class="list-group list-group-flush">
+
+                <% linkItems.forEach(function(linkItem, linkIndex){ %>
+                  <% if(linkItem.list === listItem) { %>
+                      <li class="list-group-item">
+                      <img src=<%= linkItem.icon %> class="item-ico">
+                      <a class="item-txt" href=<%= linkItem.link %> target="_blank"><%= linkItem.name %></a>
+                      <form action="/deletelink" method="post">
+                        <input type="hidden" name="removeLink" value=<%= linkItem._id %> />
+                        <button style="float: right" type="submit" class="edit-mode btn btn-outline-light btn-sm">
+                          Remove
+                        </button>
+                      </form>
+                    </li>
+                  <% } %>
+                <% }); %>
+
+              </ul>
+            </div>
+
+          <% }); %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="linkform">
+
+  <div class="form-popup" id="popup-form-link">
+    <form action="/" class="form-container", method="post">
+      <h2>Link info</h2>
+
+      <label for="listName">
+      <strong>List name</strong>
+      </label>
+      <input type="text" placeholder="List name" name="listName" required>
+
+      <label for="linkName">
+      <strong>Link name</strong>
+      </label>
+      <input type="text" placeholder="Link name" name="linkName" required>
+
+      <label for="linkLink">
+      <strong>Link</strong>
+      </label>
+      <input type="text" placeholder="Link" name="linkLink" required>
+
+      <label for="linkIcon">
+      <strong>Link icon</strong>
+      </label>
+      <input type="text" placeholder="Link icon" name="linkIcon" required>
+
+      <button type="submit" class="btn">Add</button>
+      <button type="submit" class="btn cancel" onclick="closeLinkForm()">Cancel</button>
+    </form>
+  </div>
+</section>
+
+<%- include("footer") -%>

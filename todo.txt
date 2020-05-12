@@ -1,0 +1,3 @@
+TODO:
+- Mudar o site para que links possam ser editados e salvos em uma database (tirar a parte hardcoded)
+- https://github.com/Bitcoinera/todo-list-v1
