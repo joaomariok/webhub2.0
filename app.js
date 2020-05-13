@@ -4,6 +4,7 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const bodyParser = require("body-parser");
+const fs = require("fs");
 
 // Connect to mongoose port
 mongoose.connect("mongodb://localhost:27017/linksDB", { useNewUrlParser: true, useUnifiedTopology: true });
@@ -21,35 +22,15 @@ const linkSchema = new mongoose.Schema({
 
 const Link = mongoose.model("Link", linkSchema);
 
-const link1 = new Link({
-	list: "Home",
-	name: "Trello",
-	link: "https://trello.com/",
-	icon: "https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-72x72-precomposed.91a3a04ec68a60903801.png"
-});
+const defaultLinksJson = fs.readFileSync('public/json/default.json');
+const defaultLinksObj = JSON.parse(defaultLinksJson);
+console.log(defaultLinksObj[0]);
 
-const link2 = new Link({
-	list: "Home",
-	name: "Gmail",
-	link: "https://mail.google.com/mail/u/0/#inbox",
-	icon: "https://ssl.gstatic.com/ui/v1/icons/mail/images/favicon5.ico"
-});
-
-const link3 = new Link({
-	list: "Sociais",
-	name: "Facebook",
-	link: "https://www.facebook.com",
-	icon: "https://static.xx.fbcdn.net/rsrc.php/yo/r/iRmz9lCMBD2.ico"
-});
-
-const link4 = new Link({
-	list: "Sociais",
-	name: "Twitter",
-	link: "https://twitter.com/home",
-	icon: "https://abs.twimg.com/favicons/twitter.ico"
-});
-
-const defaultLinks = [link1, link2, link3, link4];
+var defaultLinks = [];
+for (var i = 0; i < defaultLinksObj.length; i++) {
+	const link = new Link(defaultLinksObj[i]);
+	defaultLinks.push(link);
+}
 
 
 app.set("view engine", "ejs");
@@ -95,6 +76,8 @@ app.post("/", function(req, res){
 
 app.post("/deletelist", function(req, res){
 	const deleteList = req.body.removeList;
+
+	// remover todos os elementos que tem list com o nome pedido
 });
 
 

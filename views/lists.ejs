@@ -34,7 +34,7 @@
             </a>
             <form action="/deletelist" method="post">
               <input type="hidden" name="removeList" value=<%= item %> />
-              <button style="float: right" type="submit" class="edit-mode btn btn-outline-light btn-sm">
+              <button style="float: right" type="submit" class="edit-mode btn btn-danger btn-sm">
                 Remove
               </button>
             </form>
@@ -66,7 +66,7 @@
                       <a class="item-txt" href=<%= linkItem.link %> target="_blank"><%= linkItem.name %></a>
                       <form action="/deletelink" method="post">
                         <input type="hidden" name="removeLink" value=<%= linkItem._id %> />
-                        <button style="float: right" type="submit" class="edit-mode btn btn-outline-light btn-sm">
+                        <button style="float: right" type="submit" class="edit-mode btn btn-outline-danger btn-sm">
                           Remove
                         </button>
                       </form>

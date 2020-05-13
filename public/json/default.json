@@ -1,5 +1,4 @@
-{
-	"defaultlinks": [
+[
 		{
 			"list": "Home",
 			"name": "Trello",
@@ -159,8 +158,7 @@
 		{
 			"list": "Piratas",
 			"name": "Outros",
-			"link": "https://acethinker.com/download-video/websites-like-kissanime.html,
-			"icon": """
+			"link": "https://acethinker.com/download-video/websites-like-kissanime.html",
+			"icon": ""
 		}
 	]
-}
