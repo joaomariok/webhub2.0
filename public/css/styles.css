@@ -34,6 +34,11 @@ body {
 
 .edit-mode {
 	/*visibility: hidden;*/
+	font-size: 0.8rem;
+}
+
+.delete-btn {
+	display: inline;
 }
 
 .item-ico {
