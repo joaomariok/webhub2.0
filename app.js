@@ -6,8 +6,15 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 
+// Functions
+function simpleResString(res) {
+	const str = res.req.method + " " + res.req.url + " " + res.statusCode;
+	return str;
+}
+
 // Connect to mongoose port
-mongoose.connect("mongodb://localhost:27017/linksDB", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://admin-joao:Jmk.1996@cluster0-9lumg.mongodb.net/linksDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+// mongodb://localhost:27017/linksDB
 
 // Creating app variable
 const app = express();
@@ -49,6 +56,7 @@ app.route("/")
 	
 	// GET /
 	.get(function(req, res){
+		console.log(simpleResString(res));
 
 		enteredPsw = "";
 
@@ -71,6 +79,7 @@ app.route("/")
 
 	// POST /
 	.post(function(req, res){
+		console.log(simpleResString(res));
 	});
 
 
@@ -79,6 +88,7 @@ app.route("/editmode")
 
 	// GET /editmode
 	.get(function(req, res){
+		console.log(simpleResString(res));
 
 		if (enteredPsw === defaultPsw) {
 			Link.find({}, function(err, foundLinks){
@@ -102,6 +112,7 @@ app.route("/editmode")
 
 	// POST /editmode
 	.post(function(req, res){
+		console.log(simpleResString(res));
 		enteredPsw = req.body.editModePW;
 		const isChecked = req.body.editModeCB;
 
@@ -115,6 +126,7 @@ app.route("/editmode")
 
 // POST /addlink
 app.post("/addlink", function(req, res){
+	console.log(simpleResString(res));
 	const link = new Link({
 		list: req.body.listName,
 		name: req.body.linkName,
@@ -130,6 +142,7 @@ app.post("/addlink", function(req, res){
 
 // POST /deletelist
 app.post("/deletelist", function(req, res){
+	console.log(simpleResString(res));
 	const deleteList = req.body.removeList;
 
 	// remover todos os elementos que tem list com o nome pedido
@@ -144,6 +157,7 @@ app.post("/deletelist", function(req, res){
 
 // POST /deletelink
 app.post("/deletelink", function(req, res){
+	console.log(simpleResString(res));
 	const deleteLink = req.body.removeLink;
 
 	Link.findByIdAndRemove(deleteLink, function(err){
