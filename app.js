@@ -62,7 +62,7 @@ app.route("/")
 				foundLinks.forEach(function(oneLink){
 					linksSet.add(oneLink.list);
 				})
-				foundLists = Array.from(linksSet);
+				const foundLists = Array.from(linksSet);
 
 				res.render("lists", {linkItems: foundLinks, listItems: foundLists});
 			}
@@ -90,7 +90,7 @@ app.route("/editmode")
 					foundLinks.forEach(function(oneLink){
 						linksSet.add(oneLink.list);
 					})
-					foundLists = Array.from(linksSet);
+					const foundLists = Array.from(linksSet);
 
 					res.render("edit", {linkItems: foundLinks, listItems: foundLists});
 				}
